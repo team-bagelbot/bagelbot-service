@@ -1,0 +1,7 @@
+Flask==2.2.2
+Flask_RESTful==0.3.9
+llama_index==0.4.28
+protobuf==4.22.1
+google-cloud-logging
+google-cloud-secret-manager
+google-cloud-storage
