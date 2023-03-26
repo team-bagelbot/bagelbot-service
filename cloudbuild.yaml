@@ -9,9 +9,5 @@ steps:
   args: [ 'build',
   '--build-arg', 'PROJECT_ID=$PROJECT_ID',
   '-t', 'northamerica-northeast1-docker.pkg.dev/$PROJECT_ID/chatbot-bagelbot-service/image:latest', '.' ]
-- name: 'gcr.io/cloud-builders/gcloud'
-  args: ['compute','instances','add-metadata','chatbot-bagelbot-service','--zone','northamerica-northeast1-a','--metadata-from-file=startup-script=/workspace/startup-vm.bash']
-- name: 'gcr.io/cloud-builders/gcloud'
-  args: ['compute','instances', 'reset', 'chatbot-bagelbot-service', '--zone', 'northamerica-northeast1-a']
 images:
 - 'northamerica-northeast1-docker.pkg.dev/$PROJECT_ID/chatbot-bagelbot-service/image:latest'
