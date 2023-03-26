@@ -71,6 +71,9 @@ class Responses(Resource):
 			convo_thread.index = data_loader.load_index()
 			convo_thread.suggested_questions = data_loader.load_questions()
 		"""
+
+		# add disclaimer to last_answer
+		last_answer = f'{last_answer}\n\nDisclaimer: Any information provided is based on the bagel Wikipedia page and may not be accurate.'
 		return {'response': last_answer}, 200  # return data and 200 OK code
 
 api.add_resource(Responses, '/responses')
