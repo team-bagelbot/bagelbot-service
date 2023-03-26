@@ -126,6 +126,7 @@ class ConversationThread():
         if str(response).lower().find(EMPTY_RESPONSE.lower()) != -1:
             response = (
                 f"I'm trained only on specific information about {MAIN_SUBJECT} and "
-                "do not have enough information to answer your question."
+                "do not have enough information to answer your question. Try some "
+                f"of these questions: \n{self.suggested_questions}"
             )
         return response
