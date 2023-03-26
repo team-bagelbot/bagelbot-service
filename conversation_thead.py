@@ -38,7 +38,7 @@ class ConversationThread():
 
         data = {
             "question": query_str,
-            "answer": str(confirmed_response),
+            "answer": str(confirmed_response).strip(),
             "is_empty_response": confirmed_response != response
         }
         self._add_to_thread(user_id, data)
