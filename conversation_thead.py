@@ -1,7 +1,7 @@
 from llama_index import QuestionAnswerPrompt
 
 EMPTY_RESPONSE = 'Empty Response'
-MAIN_SUBJECT = 'Bagels'
+MAIN_SUBJECT = 'bagels'
 MAX_STORE_LENGTH = 3
 
 class ConversationThread():
